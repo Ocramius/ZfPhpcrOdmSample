@@ -10,11 +10,31 @@ return array(
                 ),
             ),
             
-            //overriding connection server parameters
+            //overriding used transport - allows fast switching from Jackrabbit
+            //to DBAL and the inverse too
             'zfphpcrodm-repository' => array(
                 'parameters' => array(
-                    'parameters' => array(
-                        'jackalope.jackrabbit_uri' => 'http://127.0.0.1:8888/server/',
+                    'transport' => 'zfphpcrodm-jackrabbittransport',
+                    //'transport' => 'zfphpcrodm-dbaltransport',
+                ),
+            ),
+            
+            //overriding Jackrabbit connection parameters for Jackrabbit transport
+            'zfphpcrodm-jackrabbittransport' => array(
+                'parameters' => array(
+                    'serverUri' => 'http://127.0.0.1:8888/server/',
+                ),
+            ),
+            
+            //override MySQL connection parameters for DBAL transport
+            'zfphpcrodm-dbalconnection' => array(
+                'parameters' => array(
+                    'params' => array(
+                        'driver'   => 'pdo_mysql',
+                        'host'     => 'localhost',
+                        'user'     => 'root',
+                        'password' => '',
+                        'dbname'   => 'test',
                     ),
                 ),
             ),
