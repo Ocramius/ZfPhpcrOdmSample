@@ -9,7 +9,7 @@ use Doctrine\ODM\PHPCR\Mapping\Annotations as ODM;
  * 
  * @author Marco Pivetta <ocramius@gmail.com>
  * 
- * @ODM\Document
+ * @ODM\Document(alias="Greeting")
  */
 class Greeting
 {
