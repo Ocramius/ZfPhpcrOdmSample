@@ -1,0 +1,23 @@
+<dl>
+    <dt>Module:</dt>
+    <dd>ZfMongoDbOdmSample</dd>
+    <dt>Controller:</dt>
+    <dd>DocumentManagerController</dd>
+    <dt>Action:</dt>
+    <dd>index</dd>
+    <dt>Greetings:</dt>
+    <dd>
+        <?php if(count($greetings)) { ?>
+        <ul>
+            <?php foreach($greetings as $greeting) { ?>
+            <li>
+                <?php
+                    echo htmlentities($greeting->getId())
+                        . ' - ' . htmlentities($greeting->getContent());
+                ?>
+            </li>
+            <?php } ?>
+        </ul>
+        <?php } ?>
+    </dd>
+</dl>
