@@ -1,7 +1,7 @@
 <?php
 namespace ZfPhpcrOdmSample\Document;
 
-use Doctrine\ODM\PHPCR\Mapping\Annotations as ODM;
+use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
 
 /**
  * 
@@ -9,18 +9,18 @@ use Doctrine\ODM\PHPCR\Mapping\Annotations as ODM;
  * 
  * @author Marco Pivetta <ocramius@gmail.com>
  * 
- * @ODM\Document(alias="Greeting")
+ * @PHPCR\Document(alias="Greeting", repositoryClass="ZfPhpcrOdmSample\DocumentRepository\Greeting")
  */
 class Greeting
 {
     
     /**
-     * @ODM\Id
+     * @PHPCR\Id(strategy="repository")
      */
     private $id;
 
     /**
-     * @ODM\String
+     * @PHPCR\String
      */
     private $content;
     
