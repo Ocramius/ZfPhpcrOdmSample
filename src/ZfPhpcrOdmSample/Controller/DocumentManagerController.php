@@ -4,7 +4,8 @@ namespace ZfPhpcrOdmSample\Controller;
 
 use Zend\Mvc\Controller\ActionController,
     Doctrine\ODM\PHPCR\DocumentManager,
-    ZfPhpcrOdmSample\Document\Greeting;
+    ZfPhpcrOdmSample\Document\Greeting,
+    PHPCR\Query\QueryInterface;
 
 /**
  * Sample controller used to show basic documentManager functionality
@@ -45,7 +46,9 @@ class DocumentManagerController extends ActionController
         $greetings = $this
             ->documentManager
             ->getRepository('ZfPhpcrOdmSample\Document\Greeting')
-            ->findAll();
+            ->createQuery('SELECT * FROM [nt:unstructured]', QueryInterface::JCR_SQL2)
+            ->execute()
+            ->getNodes();
         return array('greetings' => $greetings);
     }
     
