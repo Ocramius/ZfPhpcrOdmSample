@@ -46,9 +46,12 @@ class DocumentManagerController extends ActionController
         $greetings = $this
             ->documentManager
             ->getRepository('ZfPhpcrOdmSample\Document\Greeting')
-            ->createQuery('SELECT * FROM [nt:unstructured]', QueryInterface::JCR_SQL2)
-            ->execute()
-            ->getNodes();
+            ->getDocumentsByQuery(
+                $this
+                    ->documentManager
+                    ->getRepository('ZfPhpcrOdmSample\Document\Greeting')
+                    ->createQuery('SELECT * FROM [nt:unstructured]', QueryInterface::JCR_SQL2)
+            );
         return array('greetings' => $greetings);
     }
     
