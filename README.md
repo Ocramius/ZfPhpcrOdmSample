@@ -3,6 +3,31 @@ README
 
 This is a sample Module demonstrating the ZfPhpcrOdm "Zend Framework 2 - Doctrine PHPCR-ODM bridge" functionality.
 
+(VERY!) QUICK SETUP
+======
+
+Just do following:
+
+    #clone pre-configured skeleton
+    git clone -b zf-phpcr-odm-sample git://github.com/Ocramius/ZendSkeletonApplication.git --recursive
+	#then point a virtualhost's documentroot to ZendSkeletonApplication/public
+    #run jackrabbit (this is up to you: follow https://github.com/jackalope/jackalope/wiki/Running-a-jackrabbit-server )
+    java -jar jackrabbit-*version*.jar &
+
+Running Examples
+-------------
+Just visit
+
+  * http://your.vhost/document-manager/index
+        to see if the Document Manager has been created correctly
+  * http://your.vhost/document-manager/persist-greeting
+        to save a new instance of ZfPhpcrOdmSample\Document\Greeting
+  * http://your.vhost/document-manager/list-greetings
+        to view the list of saved ZfPhpcrOdmSample\Document\Greeting
+
+DETAILED SETUP (when you understand it)
+======
+
 Dependencies
 -------------
 
@@ -43,14 +68,3 @@ Tuning for production
 -------------
 
  * TODO
-
-Running Examples
--------------
-Just visit
-
-  * http://your.vhost/document-manager/index
-        to see if the Document Manager has been created correctly
-  * http://your.vhost/document-manager/persist-greeting
-        to save a new instance of ZfPhpcrOdmSample\Document\Greeting
-  * http://your.vhost/document-manager/list-greetings
-        to view the list of saved ZfPhpcrOdmSample\Document\Greeting
