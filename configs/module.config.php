@@ -22,7 +22,7 @@ return array(
             //overriding Jackrabbit connection parameters for Jackrabbit transport
             'zfphpcrodm-jackrabbittransport' => array(
                 'parameters' => array(
-                    'serverUri' => 'http://127.0.0.1:8888/server/',
+                    'serverUri' => 'http://127.0.0.1:8080/server/',
                 ),
             ),
             
