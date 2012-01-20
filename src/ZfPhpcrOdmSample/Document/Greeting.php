@@ -9,7 +9,7 @@ use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
  * 
  * @author Marco Pivetta <ocramius@gmail.com>
  * 
- * @PHPCR\Document(alias="Greeting", repositoryClass="ZfPhpcrOdmSample\DocumentRepository\Greeting")
+ * @PHPCR\Document(repositoryClass="ZfPhpcrOdmSample\DocumentRepository\Greeting")
  */
 class Greeting
 {

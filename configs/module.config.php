@@ -85,12 +85,12 @@ return array(
                 'zfphpcrodmsample-annotationdriver' => 'Doctrine\ODM\PHPCR\Mapping\Driver\AnnotationDriver',
             ),
             
-            //DocumentManagerController
-            'document-manager' => array(
+            //DocumentManagerController, only needed if you want to switch the use a different DM instance
+            /*'document-manager' => array(
                 'parameters' => array(
                     'documentManager' => 'zfphpcrodm-documentmanager',
                 ),
-            ),
+            ),*/
             
             //Adding views for this module
             'Zend\View\PhpRenderer' => array(
