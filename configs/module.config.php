@@ -7,6 +7,9 @@ return array(
             'zfphpcrodm-session' => array(
                 'parameters' => array(
                     'workspace' => 'default',
+                    //uncomment if you want to use midgard
+                    //'repository' => 'zfphpcrodm-midgard-repository',
+                    'repository' => 'zfphpcrodm-jackrabbit-repository',
                 ),
             ),
             
