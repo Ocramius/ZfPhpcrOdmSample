@@ -8,11 +8,11 @@ This is a sample Module demonstrating the ZfPhpcrOdm "Zend Framework 2 - Doctrin
 
 Just do following:
 
-    #clone pre-configured skeleton
+    # clone pre-configured skeleton
     git clone -b zf-phpcr-odm-sample git://github.com/Ocramius/ZendSkeletonApplication.git --recursive
-	#then point a virtualhost's documentroot to ZendSkeletonApplication/public
-    #run jackrabbit (this is up to you: follow https://github.com/jackalope/jackalope/wiki/Running-a-jackrabbit-server )
-    java -jar jackrabbit-*version*.jar &
+	# fetch and run jackrabbit service
+	./ZendSkeletonApplication/module/ZfPhpcrOdm/library/doctrine-phpcr-odm/lib/vendor/jackalope/tests/vendor/vendors_jackrabbit.sh
+	# then point a virtualhost's documentroot to ZendSkeletonApplication/public
 
 Running Examples
 -------------
