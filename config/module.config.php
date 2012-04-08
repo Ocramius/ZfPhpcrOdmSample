@@ -76,7 +76,7 @@ return array(
                 'parameters' => array(
                     'reader' => 'zfphpcrodm-cachedreader',
                     'paths' => array(
-                        __DIR__ . '/../src/ZfPhpcrOdmSample/Document',
+                        'ZfPhpcrOdmSample' => __DIR__ . '/../src/ZfPhpcrOdmSample/Document',
                     ),
                 ),
             ),
