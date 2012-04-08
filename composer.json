@@ -1,0 +1,35 @@
+{
+    "name": "ocramius/ZfPhpcrOdmSample",
+    "description": "Zend Framework 2 Example Module that shows how ocramius/ZfPhpcrOdm works",
+    "type": "library",
+    "keywords": [
+        "doctrine",
+        "module",
+        "zf2",
+        "odm",
+        "phpcr",
+        "example"
+    ],
+    "homepage": "http://www.doctrine-project.org/",
+    "authors": [
+        {
+            "name": "Marco Pivetta",
+            "email": "ocramius@gmail.com",
+            "homepage": "http://marco-pivetta.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "ocramius/OcraComposer": "dev-master",
+        "ocramius/ZfPhpcrOdm": "dev-master"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "ZfPhpcrOdmSample": "src/"
+        },
+        "classmap": [
+            "./"
+        ]
+    }
+}
