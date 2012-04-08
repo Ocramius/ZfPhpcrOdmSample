@@ -2,7 +2,7 @@
 return array(
     'di'    => array(
         'instance' => array(
-            
+
             //overriding workspace name
             'zfphpcrodm-session' => array(
                 'parameters' => array(
@@ -12,7 +12,7 @@ return array(
                     'repository' => 'zfphpcrodm-jackrabbit-repository',
                 ),
             ),
-            
+
             //overriding used transport - allows fast switching from Jackrabbit
             //to DBAL and the inverse too
             'zfphpcrodm-repository' => array(
@@ -21,14 +21,14 @@ return array(
                     //'transport' => 'zfphpcrodm-dbaltransport',
                 ),
             ),
-            
+
             //overriding Jackrabbit connection parameters for Jackrabbit transport
             'zfphpcrodm-jackrabbittransport' => array(
                 'parameters' => array(
                     'serverUri' => 'http://127.0.0.1:8080/server/',
                 ),
             ),
-            
+
             //override MySQL connection parameters for DBAL transport
             'zfphpcrodm-dbalconnection' => array(
                 'parameters' => array(
@@ -41,7 +41,7 @@ return array(
                     ),
                 ),
             ),
-            
+
             //overriding auth parameters
             'zfphpcrodm-credentials' => array(
                 'parameters' => array(
@@ -49,7 +49,7 @@ return array(
                     'password' => 'admin',
                 ),
             ),
-            
+
             //overriding odm configuration
             'zfphpcrodm-configuration' => array(
                 'parameters' => array(
@@ -58,7 +58,7 @@ return array(
                     'autoGenerateProxyClasses' => true,
                 ),
             ),
-            
+
             //injectiong both metadata drivers in the chained driver
             'zfphpcrodm-metadatadriver' => array(
                 'injections' => array(
@@ -70,7 +70,7 @@ return array(
                     base_convert('phpcrsample', 36, 10) => 'zfphpcrodmsample-annotationdriver',
                 ),
             ),
-            
+
             //adding an annotation driver for this module
             'zfphpcrodmsample-annotationdriver' => array(
                 'parameters' => array(
@@ -80,32 +80,30 @@ return array(
                     ),
                 ),
             ),
-            
+
             /* Less relevant config after here */
-            
+
             'alias' => array(
                 'document-manager' => 'ZfPhpcrOdmSample\Controller\DocumentManagerController',
                 'zfphpcrodmsample-annotationdriver' => 'Doctrine\ODM\PHPCR\Mapping\Driver\AnnotationDriver',
             ),
-            
+
             //DocumentManagerController, only needed if you want to switch the use a different DM instance
             /*'document-manager' => array(
                 'parameters' => array(
                     'documentManager' => 'zfphpcrodm-documentmanager',
                 ),
             ),*/
-            
+
             //Adding views for this module
-            'Zend\View\PhpRenderer' => array(
+            'Zend\View\Resolver\TemplatePathStack' => array(
                 'parameters' => array(
-                    'options'  => array(
-                        'script_paths' => array(
-                            'zfphpcrodmsample' => __DIR__ . '/../views',
-                        ),
+                    'paths'  => array(
+                        'ZfPhpcrOdmSample' => __DIR__ . '/../view',
                     ),
                 ),
             ),
-            
+
         ),
     ),
 );
